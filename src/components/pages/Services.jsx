@@ -2,7 +2,7 @@
 import React from 'react'
 import Example from './../../assets/example.png'
 import Arrow from './../Arrow'
-// import Example1 from './../assets/example1.png'
+import Example1 from './../../assets/example1.gif'
 // import Example2 from './../assets/example2.png'
 export default function Services() {
   return (
@@ -14,7 +14,7 @@ export default function Services() {
         <div className='s-container'> 
             {/* Card 1*/}
             <div className='s-card' >
-                <img className='s-image' src={Example}  alt="team image" />
+                <img className='s-image' src={Example1}  alt="team image" />
                 <div style={{ color: 'red', fontSize: '1.2rem', fontWeight: '700', marginBottom: '2%' }}>Your Sign</div>
             </div>
 
