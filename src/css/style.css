@@ -134,6 +134,15 @@ body {
     text-align: center;
     padding: 2%;
   }
+
+  .s-cardml{
+    width: 22%;
+    height: 22%;
+    text-align: center;
+    padding: 2%;
+    transform: rotate(90deg);
+  }
+
   .s-image{
     width: 100%;
     height: auto;
@@ -223,6 +232,12 @@ body {
       width: 80%;
       margin-bottom: 10px;
     }
+    .s-cardml{
+      width: 80%;
+      margin-bottom: 10px;
+      transform: rotate(180deg);
+    }
+  
     .s-arrow {
       margin-left: 10%;
     }

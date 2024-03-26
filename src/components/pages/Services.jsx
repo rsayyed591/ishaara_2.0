@@ -4,6 +4,7 @@ import Example0 from './../../assets/example0.gif'
 import Example1 from './../../assets/example1.gif'
 import Example2 from './../../assets/example2.gif'
 import Arrow from './../Arrow'
+// import './../../css/style.css'
 // import Example2 from './../assets/example2.png'
 export default function Services() {
   return (
@@ -23,9 +24,9 @@ export default function Services() {
                 <Arrow/>
             </div>
 
-            <div className='s-card' >
+            <div className='s-cardml' >
                 <img className='s-image' src={Example1} alt="team image" />
-                <div style={{ color: 'red', fontSize: '1.2rem', fontWeight: '700', marginBottom: '2%' }}>loading...</div>
+                {/* <div style={{ color: 'red', fontSize: '1.2rem', fontWeight: '700', marginBottom: '2%' }}>loading...</div> */}
             </div>
 
             <div className='s-arrow'>
