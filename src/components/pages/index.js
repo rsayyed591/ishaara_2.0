@@ -3,7 +3,7 @@ import Hero from "./Hero";
 import About from "./About";
 import Counter from './Counter';
 import Services from './Services';
-// import Translate from './Translate';
+import Translate from './Translate';
 import Try from './Tryitnow';
 import Features from './Features';
 export {
@@ -13,5 +13,6 @@ export {
     Counter,
     Services,
     Try,
-    Features
+    Features,
+    Translate
 }

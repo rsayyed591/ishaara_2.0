@@ -1,0 +1,123 @@
+@media (max-width:600px) {
+    
+    .get_tlink{
+      margin-left: 40px;
+    }
+    .get{
+      padding-inline:30px;
+      border-radius: 50px;
+    }
+  }
+  @media (max-width:500px) {
+    .get_tlink{
+      margin-left: 44px;
+      
+    }
+  }
+  @media (max-width:450px) {
+    .get_tlink{
+      margin-left: 10px;
+    }
+    .get{
+      padding-inline:30px;
+      border-radius: 50px;
+    }
+  }
+  @media(min-width:1400px){
+    .wrapper{
+      margin-left: 14%;
+    }
+  }
+
+.Videol{
+  display:flex;
+  gap: 20px;
+  width: 100%;
+}
+.camera{
+  width: 100%;
+  max-width: 1100px;
+  height: 750px;
+}
+.cam{
+    position: absolute;
+    left: 40px;
+    z-index:9;
+    text-align: center;
+    width: 85%;
+    max-width: 1000px;
+    height:auto;
+}
+.onta{
+  width:100%;
+  max-width:800px;
+  margin-left: 700px;
+  margin-right:70px;
+}
+@media (max-width:1543px){
+  .onta{
+    margin-left:600px;
+    margin-right:0px;
+  }
+}
+@media (max-width:1499px){
+  .onta{
+    margin-left:800px;
+  }
+}
+
+@media(max-width:1300px){
+  .Videol{
+    flex-wrap: wrap;
+  }
+  .onta{
+    margin-top:20px;
+    margin-left:20px;
+    width:87%;
+    max-width:1000px;
+    height:100px;
+  }
+}
+.onba{
+  margin-top:20px;
+  margin-left:20px;
+  padding:20px;
+  width:87%;
+  max-width:1000px;
+  border-radius: 3px;
+  cursor:pointer;
+  border:None;
+}
+@media screen and (max-width: 1300px) {
+  .camera {
+    height: 750px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .camera {
+    height: 700px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .camera {
+    height: 650px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .camera {
+    height: 550px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .camera {
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .camera {
+    height: 400px;
+  }
+}

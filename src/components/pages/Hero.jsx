@@ -2,8 +2,11 @@
 import React from 'react';
 import heroimg from './../../assets/hero.png';
 import './../../css/style.css';
+import './../../css/translate.css';
+import { Link } from 'react-router-dom'
 
 
+import {Counter,Services,Features,Try,About} from "./";
 const Hero = () => {
   return (
     <section
@@ -22,7 +25,6 @@ const Hero = () => {
           <div
             style={{
               flex: 1,
-              marginTop: '2%',
               fontFamily: 'Inter',
             }}
           >
@@ -50,10 +52,9 @@ const Hero = () => {
                 alignItems: 'center',
               }}
             >
-              <button className='get'
-              >
-                Get Started
-              </button>
+              
+                <Link className="get_tlink" to='/Translate'><button className='get'>Get <span>Started</span></button></Link>
+              
             </div>
           </div>
           <div style={{ flex: 1 }}>
@@ -70,7 +71,13 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      <Counter />
+    <Services/>
+    <Features/>
+    <Try />
+    <About/>
     </section>
+    
   );
 };
 
