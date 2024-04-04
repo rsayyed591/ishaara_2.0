@@ -5,6 +5,7 @@ import F2 from './../../assets/f2.png';
 import F3 from './../../assets/f3.png';
 import F4 from './../../assets/f4.png';
 import F5 from './../../assets/f5.png';
+import F6 from './../../assets/F6.png';
 export default function Features() {
   return (
     <section id='features' style={{ backgroundColor:'#fff', padding: '9.6% 0', justifyContent: 'center', alignItems: 'center'}}>
@@ -78,7 +79,7 @@ export default function Features() {
             </li>
             <li style={{ marginTop: '1.6%', border: '2px solid #EF4444', borderRadius: '10px', padding: '1rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '1.2%', backgroundColor: '#fff' }}>
-                <img src={F4} alt="Description of your image" style={{ height: '60px', width: '60px', margin: '0.8rem' }} />
+                <img src={F6} alt="Description of your image" style={{ height: '60px', width: '60px', margin: '0.8rem' }} />
               </div>
               <div style={{ textAlign: 'center' }}>
                 <h4 style={{ fontSize: '1rem', lineHeight: '1.25rem', fontWeight: '500', color: '#374151' }}>UNIQUE MODEL</h4>

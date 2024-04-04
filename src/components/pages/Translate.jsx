@@ -5,8 +5,6 @@ import { FACEMESH_TESSELATION, HAND_CONNECTIONS, Holistic, POSE_CONNECTIONS } fr
 import { drawConnectors, drawLandmarks } from '@mediapipe/drawing_utils';
 import * as tf from '@tensorflow/tfjs';
 import heroimg from './../../assets/hero.png'; 
-import './../../css/translate.css'
-
 function Translate() {
   
   const webcamRef = useRef(null);
