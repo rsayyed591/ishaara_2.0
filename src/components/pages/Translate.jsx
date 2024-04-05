@@ -1,10 +1,13 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useEffect, useRef, useState } from 'react';
 import Webcam from "react-webcam";
 import { Camera } from "@mediapipe/camera_utils";
-import { FACEMESH_TESSELATION, HAND_CONNECTIONS, Holistic, POSE_CONNECTIONS } from '@mediapipe/holistic';
-import { drawConnectors, drawLandmarks } from '@mediapipe/drawing_utils';
-import * as tf from '@tensorflow/tfjs';
-import heroimg from './../../assets/hero.png'; 
+// import { FACEMESH_TESSELATION, HAND_CONNECTIONS, Holistic, POSE_CONNECTIONS } from '@mediapipe/holistic';
+import {HAND_CONNECTIONS, Holistic, POSE_CONNECTIONS } from '@mediapipe/holistic';
+import { drawConnectors } from '@mediapipe/drawing_utils';
+// import { drawConnectors, drawLandmarks } from '@mediapipe/drawing_utils';
+// import * as tf from '@tensorflow/tfjs';
+// import heroimg from './../../assets/hero.png'; 
 function Translate() {
   
   const webcamRef = useRef(null);
