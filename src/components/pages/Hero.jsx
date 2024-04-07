@@ -3,7 +3,8 @@ import React from 'react';
 import heroimg from './../../assets/hero.png';
 import './../../css/style.css';
 import { Link } from 'react-router-dom'
-import {Counter,Services,Features,Try,About} from "./";
+// import {Counter,Services,Features,Try,About} from "./";
+import {Counter,Services,Features,Try} from "./";
 
 
 const Hero = () => {
@@ -73,7 +74,7 @@ const Hero = () => {
     <Services/>
     <Features/>
     <Try />
-    <About/>
+    {/* <About/> */}
     </section>
 
   );

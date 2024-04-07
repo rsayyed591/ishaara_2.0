@@ -1,6 +1,7 @@
 import './App.css';
 import { Box } from 'theme-ui';
-import {Navbar,Hero,Counter,Services,Features,Try,About,Translate,Pricing} from "./components/pages";
+import {Navbar,Hero,About,Translate,Pricing} from "./components/pages";
+// import {Navbar,Hero,Counter,Services,Features,Try,About,Translate,Pricing} from "./components/pages";
 import {  BrowserRouter as Router,  Routes,  Route,  }  from 'react-router-dom';  
 import './css/translate.css'
 
@@ -12,7 +13,8 @@ function App() {
         <Routes>
         <Route path="/Translate" element={<Translate/>}/>  
         <Route path="/" element={<Hero/>}/>  
-        <Route path="/pricing" element={<Pricing/>}/>  
+        <Route path="/Pricing" element={<Pricing/>}/>  
+        <Route path="/About" element={<About/>}/>  
         {/* <Contact/> */}
         </Routes>
         </Router>

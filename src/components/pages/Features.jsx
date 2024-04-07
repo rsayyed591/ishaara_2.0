@@ -5,7 +5,7 @@ import F2 from './../../assets/f2.png';
 import F3 from './../../assets/f3.png';
 import F4 from './../../assets/f4.png';
 import F5 from './../../assets/f5.png';
-import F6 from './../../assets/F6.png';
+import F6 from './../../assets/f6.png';
 export default function Features() {
   return (
     <section id='features' style={{ backgroundColor:'#fff', padding: '9.6% 0', justifyContent: 'center', alignItems: 'center'}}>
