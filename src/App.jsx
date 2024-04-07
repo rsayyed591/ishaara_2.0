@@ -1,4 +1,4 @@
-import './App.css';
+// import './App.css';
 import { Box } from 'theme-ui';
 import {Navbar1,Hero,Counter,Services,Features,Try,About,Translate} from "./components/pages";
 import {  BrowserRouter as Router,  Routes,  Route,  }  from 'react-router-dom';  
