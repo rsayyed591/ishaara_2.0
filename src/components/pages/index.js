@@ -1,4 +1,4 @@
-import Navbar from "./Navbar";
+import Navbar1 from "./Navbar1";
 import Hero from "./Hero";
 import About from "./About";
 import Counter from './Counter';
@@ -7,7 +7,7 @@ import Translate from './Translate';
 import Try from './Tryitnow';
 import Features from './Features';
 export {
-    Navbar,
+    Navbar1,
     Hero,
     About,
     Counter,
