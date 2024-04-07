@@ -7,7 +7,7 @@ body {
   margin: 0;
 }
 
-/* Navbar Section*/
+/* Navbar Section
 .navbar {
   display: grid;
   align-items: center;
@@ -33,7 +33,7 @@ body {
 .navbar a {
   color: black; 
   text-decoration: none; 
-}
+} */
 .about-card {
   margin: 10px;
   box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.2);
@@ -100,7 +100,7 @@ body {
 
 .get:hover {
   background-color: red;
-  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Adjusted box shadow */
   color: #fff;
   transform: translateY(-7px);
 }
