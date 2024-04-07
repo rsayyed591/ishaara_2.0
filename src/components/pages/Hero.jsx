@@ -16,6 +16,7 @@ const Hero = () => {
         alignItems: 'center',
         maxHeight: '80%',
         marginBottom: '21vh',
+        background:'white'
       }}
     >
       <div style={{ padding: '3.5%' }}>

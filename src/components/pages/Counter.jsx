@@ -5,7 +5,7 @@ import './../../css/style.css'
 // import Number from Num.jsx;
 export default function Counter() {
   return (
-    <section id="count">
+    <section id="count" style={{background:'white'}}>
     <div style={{fontFamily: 'Inter' }}>
         <div className='c-wrapper'>
             {/* Card 1*/}

@@ -1,4 +1,4 @@
-import Navbar from "./Navbar";
+import Navbar from "./Navbar1";
 import Hero from "./Hero";
 import About from "./About";
 import Counter from './Counter';
