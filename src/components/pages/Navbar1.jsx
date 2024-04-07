@@ -9,7 +9,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 function Navbar1() {
   return (
-    <Navbar bg="light" expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="bg-body-tertiar" style={{backgroundColor:'white'}}>
       <Container>
         <Navbar.Brand><Link to="/" style={{ textDecoration: 'none', color: 'black' }}>Ishaara_Ai</Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
