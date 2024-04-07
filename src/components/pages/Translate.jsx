@@ -64,6 +64,7 @@ let holistic;
   useEffect(() => {
     setUbtn(!ubtn)
     if(ubtn){
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     holistic = new Holistic({
       locateFile: (file) => `https://cdn.jsdelivr.net/npm/@mediapipe/holistic/${file}`
     });
