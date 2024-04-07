@@ -7,6 +7,7 @@ import Translate from './Translate';
 import Try from './Tryitnow';
 import Features from './Features';
 import Pricing from "./Pricing";
+import Modal from "./Modal";
 export {
     Navbar,
     Hero,
@@ -16,5 +17,6 @@ export {
     Try,
     Features,
     Translate,
-    Pricing
+    Pricing,
+    Modal
 }
