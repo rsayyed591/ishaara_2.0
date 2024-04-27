@@ -9,6 +9,7 @@ import Features from './Features';
 import Pricing from "./Pricing";
 import Model from "./Model";
 import Footer from "./Footer";
+import Loaders from "./Loaders.jsx";
 
 export {
     Navbar,
@@ -21,5 +22,6 @@ export {
     Translate,
     Pricing,
     Model,
-    Footer
+    Footer,
+    Loaders
 }

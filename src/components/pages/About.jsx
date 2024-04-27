@@ -4,7 +4,6 @@ import Vivek from './../../assets/Vivek.jpg';
 import Rehan from './../../assets/Rehan.jpg';
 import Rohit from './../../assets/Rohit.jpg';
 import Nishi from './../../assets/Nishi.jpg';
-import {Footer} from "./";
 
 // import './../../css/style.css';
 import './../../css/card.css';
@@ -161,7 +160,6 @@ const About = () => {
     </div>
 </div>
 </div>
-<Footer/>
 </>
   );
 }

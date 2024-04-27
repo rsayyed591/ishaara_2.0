@@ -1,7 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import './../../css/pricing.css';
-import {Footer} from "./";
 
 export default function Pricing() {
       return (
@@ -163,7 +162,6 @@ export default function Pricing() {
   </div>
 </div>
   </div>
-  <Footer/>
         </>    
   )
 }
