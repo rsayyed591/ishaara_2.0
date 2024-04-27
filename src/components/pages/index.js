@@ -10,6 +10,7 @@ import Pricing from "./Pricing";
 import Model from "./Model";
 import Footer from "./Footer";
 import Loaders from "./Loaders.jsx";
+import Usecase from "./Usecase.jsx";
 
 export {
     Navbar,
@@ -23,5 +24,6 @@ export {
     Pricing,
     Model,
     Footer,
-    Loaders
+    Loaders,
+    Usecase
 }
