@@ -8,7 +8,7 @@ import Arrow from './../Arrow'
 // import Example2 from './../assets/example2.png'
 export default function Services() {
   return (
-      <section id="services" style={{ backgroundColor:'#fff', padding: '9.6% 0',justifyContent: 'center', alignItems: 'center',textAlign:'center'}}>
+      <section id="services" style={{ backgroundColor:'#fff', paddingTop: '9.6%',justifyContent: 'center', alignItems: 'center',textAlign:'center'}}>
     <div style={{fontFamily: 'Inter' }}>
         <div className='s-title'>
         NO WORRIES , ISHAARA AI WILL BRIDGE <br/>THE GAP FOR YOU

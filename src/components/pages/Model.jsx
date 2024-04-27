@@ -1,16 +1,18 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-import './../../css/modal.css';
+import './../../css/model.css';
 import F1 from './../../assets/f1.png';
 import F2 from './../../assets/f2.png';
 import F3 from './../../assets/f3.png';
 import F4 from './../../assets/f4.png';
 import F5 from './../../assets/f5.png';
 import F6 from './../../assets/f6.png';
-export default function Modal() {
+export default function Model() {
   return (
     <>
-    <h1>Modal</h1>
+    <div className="title_heading">
+      Model
+    </div>
     <div className='container'>
 
 <div className="card">

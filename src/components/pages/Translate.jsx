@@ -3,68 +3,43 @@ import React, { useEffect, useRef, useState } from 'react';
 import Webcam from "react-webcam";
 import { Camera } from "@mediapipe/camera_utils";
 import {HAND_CONNECTIONS, Holistic, POSE_CONNECTIONS } from '@mediapipe/holistic';
+import { GoogleGenerativeAI } from "@google/generative-ai";
+import { drawConnectors } from '@mediapipe/drawing_utils';
+import { inTopKAsync } from '@tensorflow/tfjs';
 // import { FACEMESH_TESSELATION, HAND_CONNECTIONS, Holistic, POSE_CONNECTIONS } from '@mediapipe/holistic';
 // import {HAND_CONNECTIONS, Holistic, POSE_CONNECTIONS } from '@mediapipe/holistic';
-import { drawConnectors } from '@mediapipe/drawing_utils';
 // import { drawConnectors, drawLandmarks } from '@mediapipe/drawing_utils';
 // import * as tf from '@tensorflow/tfjs';
 // import heroimg from './../../assets/hero.png'; 
+
+
 function Translate() {
   
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
   const [rbtn, setRbtn]=useState(false)
-  const [ubtn, setUbtn]=useState(false)
-  const [setStr]=useState("");
   // const [str, setStr]=useState("");
+  const [str, setStr]=useState("");
   const id = useRef();
   const btn = useRef(false);
   const [responser, setResponse] = useState(null);
 
-  let chatsentences=[]
 
-  const chatgpt = async (words) => {
-    if (btn.current==false){
-      return;
-    }
-    const prompt = `Try to use these words and phrases to create a full sentence : ${words} exclude blanks`;
-    const apiKey = import.meta.env.VITE_REACT_APP_C_KEY; 
-  
-    try {
-      const response = await fetch('https://api.openai.com/v1/chat/completions', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${apiKey}`
-        },
-        body: JSON.stringify({
-          "model": "gpt-3.5-turbo",
-          "messages": [
-            {
-              "role": "user",
-              "content": prompt
-            }
-          ],
-          "max_tokens": 250
-        })
-      });
-  
-      const data = await response.json();
-      
-      console.log(data.choices[0]?.message?.content)
-      chatsentences.push(data.choices[0]?.message?.content)
-      let wordss=chatsentences.toString().replace(/,/g, ' ')
-      setResponse(wordss); 
-    } catch (error) {
-      console.error('Error:', error);
-    }
-  };
+  const genAI = new GoogleGenerativeAI(import.meta.env.VITE_REACT_APP_C_KEY);
+  const  geminiNeta=async (words)=>{
+  const model = genAI.getGenerativeModel({ model: "gemini-pro"});
+
+  const prompt = `I have developed a system that interprets hand signs to generate meaningful sentences. The system will take a sequence of detected hand signs as input and should output a coherent English sentence. The challenge lies in converting these hand signs, which lack grammar, into grammatically correct and meaningful sentences. Hand signs detected: [${words+','}] return only the meaninful sentence and don't add quotation marks.`
+
+  const result = await model.generateContent(prompt);
+  const response = await result.response;
+  const text = response.text();
+  setResponse(text)
+  }
   
 let holistic;
   useEffect(() => {
-    setUbtn(!ubtn)
-    if(ubtn){
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
     holistic = new Holistic({
       locateFile: (file) => `https://cdn.jsdelivr.net/npm/@mediapipe/holistic/${file}`
     });
@@ -87,7 +62,7 @@ let holistic;
       height: 480,
     });
     camera.start()
-  }
+  
   }, [rbtn]);
 
   const start = () => {   
@@ -158,12 +133,11 @@ let count=0
           sentences.push(jsonResponse.resp)
           let words=sentences.toString().replace(/,/g, ' ')
           setStr(words)
-          count++;
-          if (count===5)
-          {
-            count=0
-            chatgpt(words)
-          }
+          count+=1
+          if (count==3){
+              geminiNeta(words)
+              count=0
+            }
         }).catch((error) => console.error(error));
           frames.splice(0, frames.length);    
     }
@@ -178,7 +152,7 @@ let count=0
       </div>  
       <textarea className='onta' placeholder='Translation...' defaultValue={responser}></textarea>
     </div>
-      <button className='onba' onClick={btn.current ? stop : start}>{rbtn ? "Stop" : "Start"}</button>    
+      <button className='onba' onClick={btn.current ? stop : start}>{rbtn ? "Stop" : "Start"}</button>
     </>
   );
 }

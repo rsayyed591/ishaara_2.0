@@ -4,7 +4,7 @@ import heroimg from './../../assets/hero.png';
 import './../../css/style.css';
 import { Link } from 'react-router-dom'
 // import {Counter,Services,Features,Try,About} from "./";
-import {Counter,Services,Features,Try} from "./";
+import {Counter,Services,Features,Try, Footer} from "./";
 
 
 const Hero = () => {
@@ -15,11 +15,11 @@ const Hero = () => {
         justifyContent: 'center',
         alignItems: 'center',
         maxHeight: '80%',
-        marginBottom: '21vh',
+        // marginBottom: '21vh',
         background:'white'
       }}
     >
-      <div style={{ padding: '3.5%' }}>
+      <div style={{ padding: '3.5%', marginBottom:'10%'}}>
         <div className='wrapper'
         >
           {/* wrapper */}
@@ -61,7 +61,7 @@ const Hero = () => {
             <img
               src={heroimg}
               style={{
-                maxWidth: '100%',
+                width: '100%',
                 maxHeight: 'auto',
                 borderTopRightRadius: '100px',
                 marginTop: '-10px',
@@ -75,6 +75,7 @@ const Hero = () => {
     <Services/>
     <Features/>
     <Try />
+    <Footer/>
     {/* <About/> */}
     </section>
 

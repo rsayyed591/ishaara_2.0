@@ -11,21 +11,21 @@ function Navbar1() {
   return (
     <Navbar expand="lg" className="bg-body-tertiar" style={{backgroundColor:'white'}}>
       <Container>
-        <Navbar.Brand><Link to="/" style={{ textDecoration: 'none', color: 'black' }}>Ishaara_Ai</Link></Navbar.Brand>
+        <Navbar.Brand><Link to="/" style={{ textDecoration: 'none', color: 'black', fontSize:'28px' }}>Ishaara_Ai</Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="ms-auto">
             <Nav.Link>
-              <Link to="/Translate" style={{ textDecoration: 'none', color: 'black' }}>Translate</Link>
+              <Link to="/Translate" style={{ textDecoration: 'none', color: 'black', fontSize:'20px'}}>Translate</Link>
             </Nav.Link>
             <Nav.Link>
-              <Link to="/Pricing" style={{ textDecoration: 'none', color: 'black' }}>Pricing</Link>
+              <Link to="/Pricing" style={{ textDecoration: 'none', color: 'black', fontSize:'20px' }}>Pricing</Link>
             </Nav.Link>
             <Nav.Link>
-              <Link to="/About" style={{ textDecoration: 'none', color: 'black' }}>About</Link>
+              <Link to="/About" style={{ textDecoration: 'none', color: 'black', fontSize:'20px' }}>About</Link>
             </Nav.Link>
             <Nav.Link>
-              <Link to="/Modal" style={{ textDecoration: 'none', color: 'black' }}>Modal</Link>
+              <Link to="/Model" style={{ textDecoration: 'none', color: 'black', fontSize:'20px' }}>Model</Link>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

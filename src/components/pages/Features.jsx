@@ -8,7 +8,7 @@ import F5 from './../../assets/f5.png';
 import F6 from './../../assets/f6.png';
 export default function Features() {
   return (
-    <section id='features' style={{ backgroundColor:'#fff', padding: '9.6% 0', justifyContent: 'center', alignItems: 'center'}}>
+    <section id='features' style={{ backgroundColor:'#fff', paddingTop: '0.6%', marginBottom:'2.6%',justifyContent: 'center', alignItems: 'center'}}>
       <div style={{ maxWidth: '100%', padding: '0 1.6%', boxSizing: 'border-box' }}>
         <div style={{ textAlign: 'center' }}>
           <h3 style={{ marginTop: '3.2%', fontSize: '1.875rem', lineHeight: '3.6%', fontWeight: '800', letterSpacing: '-0.04%', color: '#374151' }}>
