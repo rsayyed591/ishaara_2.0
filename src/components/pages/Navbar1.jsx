@@ -22,6 +22,9 @@ function Navbar1() {
               <Link to="/Pricing" style={{ textDecoration: 'none', color: 'black', fontSize:'20px' }}>Pricing</Link>
             </Nav.Link>
             <Nav.Link>
+              <Link to="/Gallery" style={{ textDecoration: 'none', color: 'black', fontSize:'20px' }}>Gallery</Link>
+            </Nav.Link>
+            <Nav.Link>
               <Link to="/About" style={{ textDecoration: 'none', color: 'black', fontSize:'20px' }}>About</Link>
             </Nav.Link>
             <Nav.Link>
