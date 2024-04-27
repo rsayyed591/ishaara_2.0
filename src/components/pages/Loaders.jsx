@@ -6,16 +6,15 @@ function Loaders() {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        // Simulate an API call
         setTimeout(() => {
             setIsLoading(false);
-        }, 4000);
+        }, 3000);
     }, []);
 
     if (isLoading) {
         return <LoadingScreen />;
     } else {
-        return null; // Return null or an empty JSX element when isLoading is false
+        return null; 
     }
 }
 

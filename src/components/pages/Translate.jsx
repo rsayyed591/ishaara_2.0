@@ -5,7 +5,7 @@ import { Camera } from "@mediapipe/camera_utils";
 import {HAND_CONNECTIONS, Holistic, POSE_CONNECTIONS } from '@mediapipe/holistic';
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { drawConnectors } from '@mediapipe/drawing_utils';
-import { inTopKAsync } from '@tensorflow/tfjs';
+// import { inTopKAsync } from '@tensorflow/tfjs';
 // import { FACEMESH_TESSELATION, HAND_CONNECTIONS, Holistic, POSE_CONNECTIONS } from '@mediapipe/holistic';
 // import {HAND_CONNECTIONS, Holistic, POSE_CONNECTIONS } from '@mediapipe/holistic';
 // import { drawConnectors, drawLandmarks } from '@mediapipe/drawing_utils';
@@ -18,7 +18,6 @@ function Translate() {
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
   const [rbtn, setRbtn]=useState(false)
-  // const [str, setStr]=useState("");
   const [str, setStr]=useState("");
   const id = useRef();
   const btn = useRef(false);

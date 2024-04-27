@@ -10,18 +10,16 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate an API call
     setTimeout(() => {
       setLoading(false);
-    }, 4000);
+    }, 3000);
   }, []);
 
   return (
     <Box mx={20}>
-      {/* Render the Loaders component first */}
       {loading && <Loaders />}
 
-      {!loading && ( // Render the content only when loading is false
+      {!loading && (
         <Router>
           <Navbar />
           <Routes>
