@@ -20,7 +20,7 @@ const About = () => {
           <p className='p'>To prevent isolation within the often exclusive deaf community, we, the students of MH Saboo Siddik College of Engineering, affiliated with the University of Mumbai’s Computer Engineering Department, aim to bridge this communication gap using machine learning and computer vision techniques.</p>
         </div>
         <div className="media-illustration-1">
-        <img src="https://i.ibb.co/K5Cq0GN/IMG-20240428-WA0007.jpg"/>
+        <img src="https://i.ibb.co/bBKHHfr/IMG-20240428-WA0011.jpg"/>
         </div>
       </div>
       <div className="about-media">
@@ -36,9 +36,10 @@ const About = () => {
         <div className="about-media-content-1">
           <p className='p'>Subsequently, we explored various models including a 3D convolutional model working on video data, and a Time Distributed Conv model that processes multiple image frames to predict a single action. We also tested a ConvLSTM model, a combination of convolutional and LSTM networks, which showed high accuracy on the training set. However, these models were computationally intensive, required GPUs, and had difficulties distinguishing between similar actions like 'hello' and 'morning'.</p>
           <p className='p'>To create a more accessible solution, we started from scratch, building a new dataset of static actions frequently used in digital communication. We annotated these images and trained them using the MS COCO model. With the help of Roboflow, we were able to deploy our solution, ensuring real-time translation with low latency.</p>
+          <p className='p'>Moving forward, we plan to enhance our model by integrating alphabets with actions to facilitate even smoother communication between hard-of-hearing individuals and others. This enhancement aims to make everyday interactions more accessible and inclusive, leveraging the power of web applications, which can be easily accessed from anywhere via the internet.</p>
         </div>
         <div className="media-illustration-1">
-        <img src="https://i.ibb.co/bBKHHfr/IMG-20240428-WA0011.jpg"/>
+        <img src="https://i.ibb.co/K5Cq0GN/IMG-20240428-WA0007.jpg"/>
         </div>
       </div>
       <div className="about-media">
@@ -46,7 +47,6 @@ const About = () => {
         <img src="https://i.ibb.co/Ny78szP/nicholas.jpg"/>
         </div>
         <div className="about-media-content-2">
-          <p className='p'>Moving forward, we plan to enhance our model by integrating alphabets with actions to facilitate even smoother communication between hard-of-hearing individuals and others. This enhancement aims to make everyday interactions more accessible and inclusive, leveraging the power of web applications, which can be easily accessed from anywhere via the internet.</p>
           <p className='p'>I would like to extend my heartfelt thanks to Nicholas Renotte for his invaluable contributions to the field of artificial intelligence. His insightful videos on YouTube have been an integral part of my project journey, providing me with clear explanations and practical demonstrations. I've had the pleasure of implementing his models, and they have proven to be of great quality and utility. Moreover, his guidance through complex AI concepts has been superb, making difficult topics accessible and understandable. I am truly grateful for his dedication to educating and empowering aspiring AI enthusiasts like myself. For those interested, you can find his work and contributions on his GitHub account: <a href='https://github.com/nicknochnack'>Nicholas Renotte's GitHub.</a></p>
         </div>
       </div>
