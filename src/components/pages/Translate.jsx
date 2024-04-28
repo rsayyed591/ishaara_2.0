@@ -1,18 +1,24 @@
 import { useRef, useEffect, useState } from "react";
 import Webcam from "react-webcam";
 import { GoogleGenerativeAI } from "@google/generative-ai";
-const PUBLISHABLE_ROBOFLOW_API_KEY = "rf_c7rnF41caQUNdCaF2OOuzwzExHS2";
+const PUBLISHABLE_ROBOFLOW_API_KEY = import.meta.env.VITE_REACT_M_KEY;
 const PROJECT_URL = "isl-actions";
 const MODEL_VERSION = 3;
 const genAI = new GoogleGenerativeAI(import.meta.env.VITE_REACT_APP_C_KEY);
 
-const Translate= () => {
+const Translate = () => {
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
   const [inferRunning, setInferRunning] = useState(false);
   const [model, setModel] = useState(null);
   const [detectedVariables, setDetectedVariables] = useState("");
   const [responser, setResponser]=useState(null);
+  // let result=""
+  let prevs=[]
+  let cache={}
+  let freq={}
+  let res=''
+  let last;
   const counter=useRef(0);
   const startInfer = () => {
     setInferRunning(true);
@@ -63,23 +69,47 @@ const Translate= () => {
       const detections = await model.detect(webcamRef.current.video);
 
       const formattedDetections = formatDetections(detections);
+      if (formattedDetections){
+      // result+=`${formattedDetections} `
+      prevs.push(formattedDetections)
+
+      if (formattedDetections in cache){
+      cache[formattedDetections]+=1
+      }
+      else{
+        cache[formattedDetections]=1
+      }
+      for (let key in cache){
+        freq[cache[key]]=key
+      }
+      last = Object.keys(freq)[Object.keys(freq).length-1]
+      if (counter.current%3==0){
+      counter.current+=1
+      res+=`${freq[last]} `
+      cache={}
+      freq={}
+      console.log(res)
+      }
+      }
       setDetectedVariables((prev) => prev + formattedDetections);
+      if (formattedDetections && prevs[prevs.length-1]!=prevs[prevs.length-2]){
+        counter.current++;
+      }
       
-      counter.current++;
-      ``
-      if (counter.current === 9) {
+      console.log(counter.current)
+      if (counter.current==12) {
         counter.current=0
-        geminiNeta(detectedVariables);
+        geminiNeta(res);
       }
       const ctx = canvasRef.current.getContext("2d");
       drawBoxes(detections, ctx);
     }
   };
-
+  
   const formatDetections = (detections) => {
     let formatted = "";
     detections.forEach((variable) => {
-      formatted += `${variable.class} `;
+      formatted += `${variable.class}, `;
     });
     return formatted;
   };
@@ -148,46 +178,50 @@ const Translate= () => {
   };
 
   const  geminiNeta=async (words)=>{
+    console.log(words)
   const model = genAI.getGenerativeModel({ model: "gemini-1.0-pro"});
-
-  const prompt = `I have developed a system that interprets hand signs to generate meaningful sentences. The system will take a sequence of detected hand signs as input and should output a coherent English sentence. The challenge lies in converting these hand signs, which lack grammar, into grammatically correct and meaningful sentences. Hand signs detected: [${words+','}] return only the meaninful sentence and don't add quotation marks.`
+  const prompt = `I have developed a system that interprets hand signs to generate meaningful sentences. The system will take a sequence of detected hand signs as input and should output a coherent English sentence. The challenge lies in converting these hand signs, which lack grammar, into grammatically correct and meaningful sentences. Hand signs detected: [${words}] return only the meaninful sentence and don't add quotation marks.`
 
   const result = await model.generateContent(prompt);
-  const response = await result.response;
+  const response = result.response;
   const text = response.text();
   setResponser(text)
+  prevs=[]
+  res=""
+  setDetectedVariables("")
   }
 
   return (
-    <div className="flex justify-between">
-      <div className="w-1/2 relative">
-        <Webcam
+    <div >
+      <h4 className="jumbotron">⚠️ Model is sensitive and can lead to wrong predictions in worse conditions.</h4>
+      <div className="webcam">
+      <div >
+        <Webcam className='inside'
           ref={webcamRef}
           muted={true}
-          className="absolute mx-auto left-0 right-0 text-center z-10"
+          videoConstraints={{width: 800, height: 600}}
         />
-        <canvas
+        <canvas className='inside'
           ref={canvasRef}
-          className="absolute mx-auto left-0 right-0 text-center z-20"
         />
       </div>
-      <div className="w-1/2 p-4">
-        <div className="text-center mb-4">
+      <div >
+      <div className="detect">
+          <textarea className='textareab'defaultValue={responser} placeholder="Translation..."></textarea>
+        </div>
+      </div>
+      </div>
+        <div className="btn" >
           {inferRunning ? (
-            <button onClick={stopInfer} className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
-              Stop Inference
+            <button onClick={stopInfer} >
+             STOP
             </button>
           ) : (
-            <button onClick={startInfer} className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-              Start Inference
+            <button onClick={startInfer}>
+             START
             </button>
           )}
         </div>
-        <div className="text-right">
-          <h2 className="mb-2">Detected Variables:</h2>
-          <pre>{responser}</pre>
-        </div>
-      </div>
     </div>
   );
 };

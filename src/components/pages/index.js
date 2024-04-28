@@ -13,6 +13,7 @@ import Loaders from "./Loaders.jsx";
 import Usecase from "./Usecase.jsx";
 import Gallery from "./Gallery.jsx";
 import Architecture from "./Architecture.jsx";
+import Objectives from "./Objectives.jsx";
 
 export {
     Navbar,
@@ -29,5 +30,6 @@ export {
     Loaders,
     Usecase,
     Gallery,
-    Architecture
+    Architecture,
+    Objectives
 }

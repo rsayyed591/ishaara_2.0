@@ -1,12 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
-import Education from './../../assets/education.png'
-import Hardware from './../../assets/hardware.jpeg'
-import Social from './../../assets/social.jpeg'
-import Digital from './../../assets/digital.jpeg'
-// import Emergency from './../../assets/emergency.jpeg'
-// import Government from './../../assets/government.jpeg'
-// import Medical from './../../assets/medical.jpeg'
+
 import './../../css/usecase.css'
 
 export default function Usecase() {
@@ -16,42 +10,50 @@ export default function Usecase() {
       Use <span style={{color:'red'}}> Cases</span>
     </div>
     <div className="use-container">
-      <div className="use-media">
-        <div className="use-media-content-1">
-          <h3>Enhance Communication Accessibility</h3>
-          <p className='p'>Enable seamless communication for the deaf and hard of hearing by translating ISL into spoken languages and vice versa, promoting inclusivity and equal opportunities.</p>
-        </div>
-        <div className="use-media-image-1">
-        <img src={Social}/>
-        </div>
-      </div>
-      <div className="use-media">
-      <div className="use-media-image-2">
-        <img src={Digital}/>
-        </div>
-        <div className="use-media-content-2">
-          <h3>Bridge Communication Gaps</h3>
-          <p className='p'>Facilitate better understanding and interaction between the deaf and hearing communities, enhancing integration and respect.</p>
-        </div>
-      </div>
-      <div className="use-media">
-        <div className="use-media-content-1">
-          <h3>Accessibility Without External Hardware</h3>
-          <p className='p'>Ensure practical, cost-effective use by operating on standard devices like smartphones and computers, making the tool accessible to a broader audience.</p>
-        </div>
-        <div className="use-media-image-1">
-        <img src={Hardware}/>
-        </div>
-      </div>
-      <div className="use-media">
-      <div className="use-media-image-2">
-        <img src={Education}/>
-        </div>
-        <div className="use-media-content-2">
-          <h3>Support Educational and Professional Development</h3>
-          <p className='p'>Improve communication in educational and workplace settings, aiding learning and career progression for the deaf and hard of hearing.</p>
-        </div>
-      </div>
+    <div className="use-card">
+  <div className="use-card-inner">
+    <div className="use-card-front">
+      <p>Education</p>
+    </div>
+    <div className="use-card-back">
+      <p>Schools for the Deaf</p>
+      <p>Inclusive Education</p>
+    </div>
+  </div>
+</div>
+<div className="use-card">
+  <div className="use-card-inner">
+    <div className="use-card-front">
+      <p>Communication</p>
+    </div>
+    <div className="use-card-back">
+      <p>Conversations</p>
+      <p>Social Gatherings</p>
+    </div>
+  </div>
+</div>
+<div className="use-card">
+  <div className="use-card-inner">
+    <div className="use-card-front">
+      <p>Media and Entertainment</p>
+    </div>
+    <div className="use-card-back">
+      <p>TV Programs</p>
+      <p>Online Content</p>
+    </div>
+  </div>
+</div>
+<div className="use-card">
+  <div className="use-card-inner">
+    <div className="use-card-front">
+      <p>Healthcare</p>
+    </div>
+    <div className="use-card-back">
+    <p>Medical Consultations</p>
+    <p>Health Education</p>
+    </div>
+  </div>
+</div>
       </div>
     </>
   )
