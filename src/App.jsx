@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import { Box } from 'theme-ui';
-import { Navbar, Hero, About, Translate, Pricing, Model, Loaders, Gallery } from "./components/pages";
+import { Navbar, Hero, About, Translate, Services1, Model, Loaders, Gallery } from "./components/pages";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './css/translate.css';
 
@@ -25,7 +25,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Hero />} />
             <Route path="/Translate" element={<Translate />} />
-            <Route path="/Pricing" element={<Pricing />} />
+            <Route path="/Services" element={<Services1 />} />
             <Route path="/Gallery" element={<Gallery />} />
             <Route path="/About" element={<About />} />
             <Route path="/Model" element={<Model />} />

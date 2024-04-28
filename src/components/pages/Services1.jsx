@@ -2,11 +2,11 @@
 import React from 'react';
 import './../../css/pricing.css';
 
-export default function Pricing() {
+export default function Services1() {
       return (
         <>
  <div className="title_heading">
-      Pricing
+      Services
     </div>
     <div className="row">
     <div className="pack-container">

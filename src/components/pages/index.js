@@ -6,7 +6,7 @@ import Services from './Services';
 import Translate from './Translate';
 import Try from './Tryitnow';
 import Features from './Features';
-import Pricing from "./Pricing";
+import Services1 from "./Services1";
 import Model from "./Model";
 import Footer from "./Footer";
 import Loaders from "./Loaders.jsx";
@@ -22,7 +22,7 @@ export {
     Try,
     Features,
     Translate,
-    Pricing,
+    Services1,
     Model,
     Footer,
     Loaders,

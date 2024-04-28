@@ -5,6 +5,7 @@ import V1 from './../../assets/vid/VID-20240428-WA0001.mp4';
 import V2 from './../../assets/vid/VID-20240428-WA0002.mp4';
 import V3 from './../../assets/vid/VID-20240428-WA0003.mp4';
 import V4 from './../../assets/vid/VID-20240428-WA0004.mp4';
+import V5 from './../../assets/vid/VID-20240428-WA0005.mp4';
 
 const Gallery = () => {
   const [modalContent, setModalContent] = useState(null);
@@ -39,6 +40,7 @@ const Gallery = () => {
         <img src="https://i.ibb.co/bBKHHfr/IMG-20240428-WA0011.jpg" className="img-responsive" onClick={() => handleImageClick('https://i.ibb.co/bBKHHfr/IMG-20240428-WA0011.jpg')} />
         <img src="https://i.ibb.co/SNTthc4/IMG-20240428-WA0012.jpg" className="img-responsive" onClick={() => handleImageClick('https://i.ibb.co/SNTthc4/IMG-20240428-WA0012.jpg')} />
         <img src="https://i.ibb.co/7YnHVGN/IMG-20240428-WA0013.jpg" className="img-responsive" onClick={() => handleImageClick('https://i.ibb.co/7YnHVGN/IMG-20240428-WA0013.jpg')} />
+        <img src="https://i.ibb.co/Ny5HZVK/IMG-20240428-WA0016.jpg" className="img-responsive" onClick={() => handleImageClick('https://i.ibb.co/Ny5HZVK/IMG-20240428-WA0016.jpg')} />
         <video className="vid" controls onClick={() => handleVideoClick(V1)}>
           <source src={V1} type="video/mp4" />
         </video>
@@ -51,8 +53,11 @@ const Gallery = () => {
         <video className="vid" controls onClick={() => handleVideoClick(V4)}>
           <source src={V4} type="video/mp4" />
         </video>
+        <video className="vid" controls onClick={() => handleVideoClick(V5)}>
+          <source src={V5} type="video/mp4" />
+        </video>
       </div>
-
+      
       <div id="myModal" className="modal" onClick={closeModal}>
         <div className="modal-content" onClick={(e) => e.stopPropagation()}>
           <span className="close" onClick={closeModal}>&times;</span>
