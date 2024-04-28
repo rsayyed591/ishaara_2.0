@@ -15,7 +15,7 @@ export default function Loadingscreen() {
               <div className="control maximize"></div>
             </div>
           </div>
-          <div className="text">py ishaara.py</div>
+          <div className="loader-text">py ishaara.py</div>
         </div>
       </div>
     </>

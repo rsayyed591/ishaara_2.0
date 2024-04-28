@@ -1,75 +1,65 @@
-.media-title_heading {
-  font-size: 2em;
-  margin-top: 3%;
-  margin-left: 4%;
-  margin-right: 4%;
-  margin-bottom: 4%;
+.use_heading{
+  font-size: 3em;
+  /* text-align: center; */
+  margin: 4%;
   font-weight: bold;
   display: flex;
   justify-content: center;
 }
-
-.media-container {
+.p {
+  margin-block-start: var(--metric-box-spacing);
+}
+.use-container {
   display: flex;
-  justify-content: center;
-  margin: 0 10%;
-  justify-items: center;
-  align-items: center;
   flex-direction: column;
 }
-
-.media-row {
+.use-media {
+  margin: var(--metric-box-spacing);
+  padding: var(--metric-box-spacing);
   display: flex;
   align-items: center;
-  width: 90%;
-  margin-left: 30%;
-  margin-bottom: 50px;
+  gap: var(--metric-box-spacing);
+  margin:0% 2% 2% 2%;
+  padding: 2%;
 }
 
-.media-image img{
-  width: 60%;
-  height: auto;
-  object-fit: cover; /* Ensures images maintain aspect ratio */
-  border: 2px solid #ddd; /* Border */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Box shadow */
+.use-media-image-1 img, .use-media-image-2 img{
+  width: 200%;
+  height: 100%;
 }
 
-.media-image {
+.use-media-image-1 {
+  flex: 1;
+  margin-right: 20%;
+
+}
+.use-media-content-1 {
+  flex: 3;
+}
+.use-media-image-2 {
   flex: 1;
 }
-
-.media-text {
-  flex: 1;
+.use-media-content-2 {
+  flex: 3;
+  margin-left: 22%;
 }
 
-.media-row:nth-child(odd) .media-image {
-  order: 1;
-}
-
-.media-row:nth-child(even) .media-image {
-  order: -1;
-}
-
-@media (max-width: 768px) {
-  img {
-    width: 100%;
-  }
-  .media-container {
-    display: flex;
+@media (max-width: 600px) {
+  .use-media {
+    flex-direction: column;
+    background-color: whitesmoke;
   }
   
-  .media-row {
-    margin-left: 10%;
-    flex-direction: column;
+  .use-media-image-1 img, .use-media-image-2 img{
+    width: 100%;
+    height: auto;
   }
-  .media-image {
-    flex: 0; 
+  .use-media-image-1 {
+    margin-right: 0;
   }
-  .media-text {
-    flex: 0; 
+  .use-media-content-2 {
+    margin-left: 0;  
   }
-  .media-row:nth-child(odd) .media-image,
-  .media-row:nth-child(even) .media-image {
-    order: 0; 
-  }
+  
 }
+

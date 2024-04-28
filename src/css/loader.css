@@ -90,7 +90,7 @@
     color: #eee;
   }
   
-  .text {
+  .loader-text {
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;

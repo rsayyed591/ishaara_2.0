@@ -5,7 +5,6 @@ import Rehan from './../../assets/Rehan.jpg';
 import Rohit from './../../assets/Rohit.jpg';
 import Nishi from './../../assets/Nishi.jpg';
 
-// import './../../css/style.css';
 import './../../css/card.css';
 
 const About = () => {
@@ -44,16 +43,16 @@ const About = () => {
       </div>
       <div className="about-media">
       <div className="media-illustration-2">
-        <img src="https://i.ibb.co/FzMMxdW/IMG-20240428-WA0006.jpg"/>
+        <img src="https://i.ibb.co/Ny78szP/nicholas.jpg"/>
         </div>
         <div className="about-media-content-2">
           <p className='p'>Moving forward, we plan to enhance our model by integrating alphabets with actions to facilitate even smoother communication between hard-of-hearing individuals and others. This enhancement aims to make everyday interactions more accessible and inclusive, leveraging the power of web applications, which can be easily accessed from anywhere via the internet.</p>
-          <p className='p'>We thank Nicholas</p>
+          <p className='p'>I would like to extend my heartfelt thanks to Nicholas Renotte for his invaluable contributions to the field of artificial intelligence. His insightful videos on YouTube have been an integral part of my project journey, providing me with clear explanations and practical demonstrations. I've had the pleasure of implementing his models, and they have proven to be of great quality and utility. Moreover, his guidance through complex AI concepts has been superb, making difficult topics accessible and understandable. I am truly grateful for his dedication to educating and empowering aspiring AI enthusiasts like myself. For those interested, you can find his work and contributions on his GitHub account: <a href='https://github.com/nicknochnack'>Nicholas Renotte's GitHub.</a></p>
         </div>
       </div>
     </div>
-    <div className="title_heading">
-      Meet my team
+    <div className="meet_heading">
+    The Faces Behind Ishaara
     </div>
       <div className="row"> 
       <div className="card-client">
