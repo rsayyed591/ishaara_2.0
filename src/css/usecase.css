@@ -56,6 +56,7 @@
   .obj-media {
     flex-direction: column;
     background-color: whitesmoke;
+    margin-top: 10%;
   }
   
   .obj-media-image-1 img, .obj-media-image-2 img{
@@ -71,6 +72,9 @@
   .use-container {
     flex-direction: column;
     column-gap: 5%;
+  }
+  .use-card{
+    margin-bottom: 5%;
   }
 }
 
@@ -132,6 +136,6 @@
 
 .use-container {
   display: flex;
-  margin: 5%;
+  margin: 4%;
   gap: 5%;
 }
