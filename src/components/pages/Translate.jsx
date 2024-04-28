@@ -1,10 +1,9 @@
 import { useRef, useEffect, useState } from "react";
 import Webcam from "react-webcam";
-import { GoogleGenerativeAI } from "@google/generative-ai";
-const PUBLISHABLE_ROBOFLOW_API_KEY = import.meta.env.VITE_REACT_M_KEY;
+const PUBLISHABLE_ROBOFLOW_API_KEY = 'rf_c7rnF41caQUNdCaF2OOuzwzExHS2';
 const PROJECT_URL = "isl-actions";
 const MODEL_VERSION = 3;
-const genAI = new GoogleGenerativeAI(import.meta.env.VITE_REACT_APP_C_KEY);
+
 
 const Translate = () => {
   const webcamRef = useRef(null);
@@ -13,11 +12,13 @@ const Translate = () => {
   const [model, setModel] = useState(null);
   const [detectedVariables, setDetectedVariables] = useState("");
   const [responser, setResponser]=useState(null);
+  const [modeVar,setModeVar]=useState('');
   // let result=""
   let prevs=[]
   let cache={}
   let freq={}
   let res=''
+  let arrres=[]
   let last;
   const counter=useRef(0);
   const startInfer = () => {
@@ -82,12 +83,16 @@ const Translate = () => {
       for (let key in cache){
         freq[cache[key]]=key
       }
+      console.log(freq)
       last = Object.keys(freq)[Object.keys(freq).length-1]
-      if (counter.current%3==0){
+      if (counter.current%3==0 ){
       counter.current+=1
       res+=`${freq[last]} `
+      arrres.push(freq[last])
       cache={}
       freq={}
+
+      setModeVar(res)
       console.log(res)
       }
       }
@@ -97,9 +102,10 @@ const Translate = () => {
       }
       
       console.log(counter.current)
-      if (counter.current==12) {
+      if (arrres.length>=4) {
         counter.current=0
         geminiNeta(res);
+        arrres=[]
       }
       const ctx = canvasRef.current.getContext("2d");
       drawBoxes(detections, ctx);
@@ -177,17 +183,22 @@ const Translate = () => {
     });
   };
 
-  const  geminiNeta=async (words)=>{
-    console.log(words)
-  const model = genAI.getGenerativeModel({ model: "gemini-1.0-pro"});
-  const prompt = `I have developed a system that interprets hand signs to generate meaningful sentences. The system will take a sequence of detected hand signs as input and should output a coherent English sentence. The challenge lies in converting these hand signs, which lack grammar, into grammatically correct and meaningful sentences. Hand signs detected: [${words}] return only the meaninful sentence and don't add quotation marks.`
+  const  geminiNeta=(words)=>{
+    const formdata = new FormData();
+  formdata.append("text", words);
 
-  const result = await model.generateContent(prompt);
-  const response = result.response;
-  const text = response.text();
-  setResponser(text)
+    const requestOptions = {
+      method: "POST",
+      body: formdata,
+    };
+  fetch("https://9b07-103-220-42-139.ngrok-free.app/gemini_api", requestOptions)
+    .then((response) => response.json())
+    .then((result) => setResponser(result["data"]))
+    .catch((error) => console.error(error));
+
   prevs=[]
   res=""
+  setModeVar(res)
   setDetectedVariables("")
   }
 
@@ -212,6 +223,7 @@ const Translate = () => {
       </div>
       </div>
         <div className="btn" >
+          
           {inferRunning ? (
             <button onClick={stopInfer} >
              STOP
