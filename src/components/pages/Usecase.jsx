@@ -1,18 +1,19 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
 import Education from './../../assets/education.png'
-import Medical from './../../assets/medical.jpeg'
-import Government from './../../assets/government.jpeg'
+import Hardware from './../../assets/hardware.jpeg'
 import Social from './../../assets/social.jpeg'
 import Digital from './../../assets/digital.jpeg'
-import Emergency from './../../assets/emergency.jpeg'
+// import Emergency from './../../assets/emergency.jpeg'
+// import Government from './../../assets/government.jpeg'
+// import Medical from './../../assets/medical.jpeg'
 import './../../css/usecase.css'
 
 export default function Usecase() {
   return (
     <>
       <div className="use_heading">
-      Use Cases
+      Use <span style={{color:'red'}}> Cases</span>
     </div>
     <div className="use-container">
       <div className="use-media">
@@ -35,11 +36,11 @@ export default function Usecase() {
       </div>
       <div className="use-media">
         <div className="use-media-content-1">
-          <h3>Promote Independence</h3>
-          <p className='p'>Reduce dependence on interpreters by empowering individuals to engage more freely in daily activities through easy-to-use translation tools.</p>
+          <h3>Accessibility Without External Hardware</h3>
+          <p className='p'>Ensure practical, cost-effective use by operating on standard devices like smartphones and computers, making the tool accessible to a broader audience.</p>
         </div>
         <div className="use-media-image-1">
-        <img src={Government}/>
+        <img src={Hardware}/>
         </div>
       </div>
       <div className="use-media">
