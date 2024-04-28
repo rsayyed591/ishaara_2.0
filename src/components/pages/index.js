@@ -12,6 +12,7 @@ import Footer from "./Footer";
 import Loaders from "./Loaders.jsx";
 import Usecase from "./Usecase.jsx";
 import Gallery from "./Gallery.jsx";
+import Architecture from "./Architecture.jsx";
 
 export {
     Navbar,
@@ -27,5 +28,6 @@ export {
     Footer,
     Loaders,
     Usecase,
-    Gallery
+    Gallery,
+    Architecture
 }

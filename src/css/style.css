@@ -248,3 +248,26 @@ body {
     font-size: 2.2rem;
   } 
 }
+
+.arc_heading{
+  font-size: 3em;
+  /* text-align: center; */
+  margin: 4%;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+
+.arc-container{
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .arc-container img{
+    width: 100%;
+    height: auto;
+  }  
+}

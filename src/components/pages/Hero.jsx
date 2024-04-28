@@ -4,7 +4,7 @@ import heroimg from './../../assets/hero.png';
 import './../../css/style.css';
 import { Link } from 'react-router-dom'
 // import {Counter,Services,Features,Try,About} from "./";
-import {Counter,Services,Features,Try, Footer, Usecase} from "./";
+import {Counter,Services,Features,Try, Footer, Usecase, Architecture} from "./";
 
 
 const Hero = () => {
@@ -76,6 +76,7 @@ const Hero = () => {
     <Features/>
     <Usecase />
     <Try />
+    <Architecture/>
     <Footer/>
     {/* <About/> */}
     </section>
