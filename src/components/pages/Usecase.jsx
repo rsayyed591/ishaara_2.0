@@ -24,7 +24,7 @@ export default function Usecase() {
 <div className="use-card">
   <div className="use-card-inner">
     <div className="use-card-front">
-      <p>Communication</p>
+      <p>Digital Communication</p>
     </div>
     <div className="use-card-back">
       <p>Conversations</p>
@@ -35,11 +35,10 @@ export default function Usecase() {
 <div className="use-card">
   <div className="use-card-inner">
     <div className="use-card-front">
-      <p>Media and Entertainment</p>
+      <p>Quick Communication</p>
     </div>
     <div className="use-card-back">
-      <p>TV Programs</p>
-      <p>Online Content</p>
+      <p>Quickly Communicate without Latency</p>
     </div>
   </div>
 </div>
