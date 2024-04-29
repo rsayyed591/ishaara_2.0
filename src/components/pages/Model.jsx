@@ -8,7 +8,7 @@ export default function Model() {
   return (
     <>
     <div className="title_heading">
-      Model
+      Models
     </div>
     <div className='container'>
 
