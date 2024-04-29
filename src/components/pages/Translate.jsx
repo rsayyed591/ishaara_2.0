@@ -191,7 +191,7 @@ const Translate = () => {
       method: "POST",
       body: formdata,
     };
-  fetch("https://9b07-103-220-42-139.ngrok-free.app/gemini_api", requestOptions)
+  fetch("https://9e73-103-220-42-139.ngrok-free.app/gemini_api", requestOptions)
     .then((response) => response.json())
     .then((result) => setResponser(result["data"]))
     .catch((error) => console.error(error));
