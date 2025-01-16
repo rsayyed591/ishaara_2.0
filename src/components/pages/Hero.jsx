@@ -12,7 +12,7 @@ const Hero = () => {
       "This website has been designed using Next.js. Would you like to proceed to the Next.js version hosted at https://ishaaraai.vercel.app/?"
     );
     if (userResponse) {
-      window.location.href = "https://ishaaraai.vercel.app/";
+      window.location.href = "https://ishaara.vercel.app/";
     }
   }, []);
 
