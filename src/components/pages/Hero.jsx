@@ -9,7 +9,7 @@ const Hero = () => {
   // Alert when the component is loaded
   useEffect(() => {
     const userResponse = window.confirm(
-      "This website has been designed using Next.js. Would you like to proceed to the Next.js version hosted at https://ishaaraai.vercel.app/?"
+      "This website has been designed using Next.js. Would you like to proceed to the Next.js version hosted at https://ishaara.vercel.app/?"
     );
     if (userResponse) {
       window.location.href = "https://ishaara.vercel.app/";
